@@ -36,6 +36,7 @@ var users = {
 	}
 }
 
+var messages = []
 
 /*
 *	Config
@@ -103,6 +104,16 @@ app.get('/users.json', function(req, res)
 {
 	res.send(JSON.stringify(users));    
 });
+
+app.post('/sendMessage', function(req, res)
+	{
+		const id = req.param('id');
+		var obj = {
+			message: req.body,
+			sender: users[id]
+		};
+		console.log(message);
+	})
 /*
 *	Listen
 */
