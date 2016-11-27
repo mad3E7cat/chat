@@ -75,7 +75,7 @@ app.get('/user.json', function (req, res){
 
 app.get('/users.json', function(req, res)
 {
-	res.send(JSON.stringify(users));
+	res.send(JSON.stringify(users));  
 });
 /*
 *	Listen
