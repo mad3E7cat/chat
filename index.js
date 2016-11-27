@@ -6,10 +6,36 @@ var validate = express()
 var http = require('http')
 var https = require('https')
 var request = require('request')
-// /////
+
 const ACCESS_TOKEN = '663c6234444d392c6f17fb43f78a17b4b8078514dcd35c9bf17a3a20be2a4766abd55d4e26373e3fc766b'
 
-var users = {}
+var users = {
+	19035667: {
+		id: 19035667,
+		first_name: 'Лера',
+		last_name: 'Васильева',
+		photo_50: 'https://pp.vk.me/...72f/HGUV98oefz4.jpg'
+	},
+	279011394: {
+		id: 279011394,
+		first_name: 'Павел',
+		last_name: 'Аверин',
+		photo_50: 'https://pp.vk.me/...572/jTINfwVtshc.jpg'
+	},
+	51392062: {
+		id: 51392062,
+		first_name: 'Ксения',
+		last_name: 'Сизова',
+		photo_50: 'https://pp.vk.me/...752/iur81-sfplY.jpg'
+	},
+	220677195: {
+		id: 220677195,
+		first_name: 'Crazy',
+		last_name: 'Mofos',
+		photo_50: 'https://pp.vk.me/...3f8/MDkCM1PUJq4.jpg'
+	}
+}
+
 
 /*
 *	Config
