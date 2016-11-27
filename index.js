@@ -112,8 +112,19 @@ app.post('/sendMessage', function(req, res)
 			message: req.body,
 			sender: users[id]
 		};
+		messages.push(obj);
 		console.log(message);
 	})
+
+app.get('/msgSplit', function(req, res)
+{
+	const len = req.param('length');
+	if(messages.length < len){
+		 var str = messages.slice(messages.length - len);
+		 console.log(str);
+		 res.send(str);
+	}
+})
 /*
 *	Listen
 */
