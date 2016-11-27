@@ -116,13 +116,13 @@ app.post('/sendMessage', function(req, res)
 		console.log(message);
 	})
 
-app.get('/msgSplit', function(req, res)
+app.get('/getNewMessages', function(req, res)
 {
 	const len = req.param('length');
 	if(messages.length < len){
 		 var str = messages.slice(messages.length - len);
 		 console.log(str);
-		 res.send(str);
+		 res.send(JSON.stringify(str));
 	}
 })
 /*
